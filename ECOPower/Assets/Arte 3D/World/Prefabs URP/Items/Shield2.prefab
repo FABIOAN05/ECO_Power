@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4764595198927190}
   - component: {fileID: 33462238714410120}
   - component: {fileID: 23975680478573486}
+  - component: {fileID: 6348226974232838622}
   m_Layer: 0
   m_Name: Shield2
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6348226974232838622
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310816172587118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2b16ee3831c834541bc6150021aa9c97, type: 3}
