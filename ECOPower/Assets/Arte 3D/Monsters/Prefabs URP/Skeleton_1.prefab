@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4527245937463984086
+--- !u!1 &2744430425070505503
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,88 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2476065877298078265}
-  - component: {fileID: 7929206824027603392}
-  - component: {fileID: 4961299430434234755}
-  - component: {fileID: 20287109011347468}
-  - component: {fileID: 3636094883131753404}
+  - component: {fileID: 6126552486621838544}
+  - component: {fileID: 4721826014884843367}
+  - component: {fileID: 4507831919875319234}
+  m_Layer: 0
+  m_Name: Collisionador muerte
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6126552486621838544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744430425070505503}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.696, z: 0}
+  m_LocalScale: {x: 7.5, y: 7.5, z: 7.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4885729239326807089}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4721826014884843367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744430425070505503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08, y: 0.1, z: 0.08}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4507831919875319234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744430425070505503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d888e30e232e9429f17c74caee33db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elemento: Player
+  entro:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7165751983211051435}
+        m_TargetAssemblyTypeName: Enemigo, Assembly-CSharp
+        m_MethodName: Destruir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  salio:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &3920780622293588860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2388174000846140703}
+  - component: {fileID: 4295374207845159073}
+  - component: {fileID: 695294804032408534}
+  - component: {fileID: 1882569822302116346}
+  - component: {fileID: 5465514808410882580}
   m_Layer: 0
   m_Name: Colisionador
   m_TagString: Untagged
@@ -20,36 +97,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2476065877298078265
+--- !u!4 &2388174000846140703
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4527245937463984086}
+  m_GameObject: {fileID: 3920780622293588860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
-  m_LocalScale: {x: 1.1, y: 0.8, z: 1.1}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalScale: {x: 2.25, y: 1.05, z: 2.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4885729239326807089}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7929206824027603392
+--- !u!33 &4295374207845159073
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4527245937463984086}
+  m_GameObject: {fileID: 3920780622293588860}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4961299430434234755
+--- !u!23 &695294804032408534
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4527245937463984086}
+  m_GameObject: {fileID: 3920780622293588860}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,26 +162,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &20287109011347468
+--- !u!65 &1882569822302116346
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4527245937463984086}
+  m_GameObject: {fileID: 3920780622293588860}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3636094883131753404
+  m_Size: {x: 0.66, y: 1, z: 0.6}
+  m_Center: {x: 0, y: 0.15, z: 0}
+--- !u!114 &5465514808410882580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4527245937463984086}
+  m_GameObject: {fileID: 3920780622293588860}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76d888e30e232e9429f17c74caee33db, type: 3}
@@ -421,7 +498,8 @@ Transform:
   m_Children:
   - {fileID: 4885729239326807091}
   - {fileID: 4885729239326807103}
-  - {fileID: 2476065877298078265}
+  - {fileID: 2388174000846140703}
+  - {fileID: 6126552486621838544}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -472,10 +550,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.8
+  m_Radius: 0.1
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &7165751983211051435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,9 +584,9 @@ MonoBehaviour:
   entro:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7165751983211051435}
-        m_TargetAssemblyTypeName: Enemigo, Assembly-CSharp
-        m_MethodName: Destruir
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MovimientoPersonaje, Assembly-CSharp
+        m_MethodName: Reiniciar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

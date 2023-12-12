@@ -1,5 +1,82 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &614060071862492442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5805498380539111199}
+  - component: {fileID: 621787458345398757}
+  - component: {fileID: 9080297022475069832}
+  m_Layer: 0
+  m_Name: Collisionador muerte
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5805498380539111199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614060071862492442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.696, z: 0}
+  m_LocalScale: {x: 7.499999, y: 7.5, z: 7.499999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2163908818311373899}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &621787458345398757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614060071862492442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08, y: 0.1, z: 0.08}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9080297022475069832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614060071862492442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d888e30e232e9429f17c74caee33db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elemento: Player
+  entro:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5278229987538972744}
+        m_TargetAssemblyTypeName: Enemigo, Assembly-CSharp
+        m_MethodName: Destruir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  salio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2163908818311805025
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +313,6 @@ GameObject:
   - component: {fileID: 5697962707002377892}
   - component: {fileID: 5851941891175271578}
   - component: {fileID: 5278229987538972744}
-  - component: {fileID: 1618249930220743601}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Untagged
@@ -258,7 +334,8 @@ Transform:
   m_Children:
   - {fileID: 2163908818311373897}
   - {fileID: 2163908818311373907}
-  - {fileID: 2522665599893369005}
+  - {fileID: 7158964147631032826}
+  - {fileID: 5805498380539111199}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -309,10 +386,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.1
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &5278229987538972744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,37 +404,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 1.2
   distancia: 2
---- !u!114 &1618249930220743601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2163908818311805035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d888e30e232e9429f17c74caee33db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elemento: Player
-  entro:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5278229987538972744}
-        m_TargetAssemblyTypeName: Enemigo, Assembly-CSharp
-        m_MethodName: Destruir
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  salio:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2163908818311805037
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +560,7 @@ Transform:
   m_Father: {fileID: 2163908818311373891}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5589747772303429614
+--- !u!1 &3364547470897915052
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -522,11 +568,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2522665599893369005}
-  - component: {fileID: 277916254207158006}
-  - component: {fileID: 7536754826740782002}
-  - component: {fileID: 450609237385809950}
-  - component: {fileID: 1247687385513785674}
+  - component: {fileID: 7158964147631032826}
+  - component: {fileID: 5146218015770590209}
+  - component: {fileID: 5778129522169923594}
+  - component: {fileID: 6667228780733736549}
+  - component: {fileID: 4022903884923258284}
   m_Layer: 0
   m_Name: Colisionador
   m_TagString: Untagged
@@ -534,36 +580,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2522665599893369005
+--- !u!4 &7158964147631032826
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5589747772303429614}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
-  m_LocalScale: {x: 1.1, y: 0.8, z: 1.1}
+  m_GameObject: {fileID: 3364547470897915052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalScale: {x: 2.25, y: 1.05, z: 2.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2163908818311373899}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &277916254207158006
+--- !u!33 &5146218015770590209
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5589747772303429614}
+  m_GameObject: {fileID: 3364547470897915052}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7536754826740782002
+--- !u!23 &5778129522169923594
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5589747772303429614}
+  m_GameObject: {fileID: 3364547470897915052}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -599,26 +645,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &450609237385809950
+--- !u!65 &6667228780733736549
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5589747772303429614}
+  m_GameObject: {fileID: 3364547470897915052}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1, z: 1.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1247687385513785674
+  m_Size: {x: 0.75, y: 1, z: 0.6}
+  m_Center: {x: 0, y: 0.15, z: 0}
+--- !u!114 &4022903884923258284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5589747772303429614}
+  m_GameObject: {fileID: 3364547470897915052}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76d888e30e232e9429f17c74caee33db, type: 3}
