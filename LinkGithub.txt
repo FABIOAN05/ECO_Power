@@ -3,3 +3,5 @@ Nombre: Fabio Andrés Avila Forero
 Grupo: 2
 
 Github link: https://github.com/FABIOAN05/ECO_Power.git
+
+Link Documento GDD: https://docs.google.com/document/d/1ICVikP0M2Zyln4d2gwXRoSHs90lyM_CR/edit?usp=sharing&ouid=106991048863709706606&rtpof=true&sd=true
